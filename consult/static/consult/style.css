@@ -1,0 +1,186 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+/*
+bf7c0b - mid brown
+e7d2a7 - light brown
+89a324 - mid green
+5c5441 - dark green/brown
+
+
+f8ffff - very light blue
+e0ffff - light blue
+2fcbfe - mid blue
+04689a - dark blue
+*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+  padding-top: 50px;
+  margin-bottom: 60px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f8ffff;
+  border-top: 1px solid #2fcbfe;
+  padding-top:10px;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+.navbar-inverse {
+	background-color: #f8ffff;
+	border-color: #2fcbfe;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #5a5a5a;
+}
+
+.navbar-brand {
+	padding: 5px 20px 3px 10px;
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover{
+	color: #04689a;	
+}
+
+.navbar-inverse .navbar-brand img{
+	display:inline;
+	padding-right: 10px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #5a5a5a;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus, 
+.navbar-inverse .navbar-nav > li > a:hover 
+{
+	background-color: #04689a;
+}
+ 
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: #04689a;
+    color: #fff;
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* Mapping
+-------------------------------------------------- */
+#mapid { height: 300px; }
+
+
+/* h tags
+-------------------------------------------------- */
+
+h1 {
+	color: #04689a;
+	font-size: 150%;
+}
+
+h2 {
+	color: #04689a;
+	font-size: 130%;
+}
+
+/* page styles */
+.cv-row, .al-row{
+	margin-bottom:20px;
+}
+.contact-type {
+	font-weight:bold;
+}
+
+.cv-date {
+	font-weight:normal;
+}
+
+.cv-title, .cv-p-title {
+	font-weight:bold;
+}
+
+.cv-organisation {
+	font-weight:bold;
+}
+
+.cv-description {
+	margin-top:10px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
