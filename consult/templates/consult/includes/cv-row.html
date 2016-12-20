@@ -20,10 +20,10 @@
   	{% if cv.description %}
 	  	<div class="cv-description">
 	  		<p>{{ cv.description }}</p>
-	  		{% if cv.CVDetail %}
+	  		{% if cv.details %}
 	  		<ul>
-	  			{% for cvd in cv.cvdetail %}
-	  			<li></li>
+	  			{% for cvd in cv.details.all %}
+	  				<li>{{ cvd.description }}</li>
 	  			{% endfor %}
 	  		</ul>
 	  		{% endif %}
