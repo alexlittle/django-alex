@@ -7,6 +7,9 @@ CV_TYPE = (
         ('Presentation', 'Presentation'),
         ('Workshop', 'Workshop'),
         ('Publication', 'Publication'),
+        ('Education', 'Education'),
+        ('Awards', 'Awards'),
+        ('Courses', 'Courses'),
     )
 
 

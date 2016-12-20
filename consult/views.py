@@ -13,8 +13,7 @@ def home_view(request):
     
 def cv_view(request):
     
-    experience = CV.objects.filter(active=True, type='experience').order_by('date')
-    
+    experience = CV.objects.filter(active=True, type='experience').order_by('-date')
     
     
     return render_to_response('consult/cv.html',

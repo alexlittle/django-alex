@@ -8,17 +8,26 @@
   	{% endif %}
   	
   	{% if cv.location %}
-  		<div class="cv-organisation"><a href="{{ cv.location_url }}">{{ cv.location }}</a></div>
-  		
+  		<div class="cv-organisation">
+  		{% if cv.location_url %}
+  			<a href="{{ cv.location_url }}">{{ cv.location }}</a>
+  		{% else %}
+  			{{ cv.location }}
+  		{% endif %}
+  		</div>
   	{% endif %}
   	
   	{% if cv.description %}
 	  	<div class="cv-description">
+	  		<p>{{ cv.description }}</p>
+	  		{% if cv.CVDetail %}
 	  		<ul>
+	  			{% for cvd in cv.cvdetail %}
 	  			<li></li>
+	  			{% endfor %}
 	  		</ul>
+	  		{% endif %}
 	  	</div>
-  	
   	{% endif %}
   </div>
 </div>
