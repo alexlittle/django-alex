@@ -1,0 +1,24 @@
+<div class="row cv-row">
+  <div class="col-sm-1 cv-date">{{ cv.date_display }}</div>
+  <div class="col-sm-8">
+  	{% if cv.title_url %}
+  		<div class="cv-title"><a href="{{ cv.title_url }}">{{ cv.title }}</a></div>
+  	{% else %}
+  		<div class="cv-title">{{ cv.title }}</div>
+  	{% endif %}
+  	
+  	{% if cv.location %}
+  		<div class="cv-organisation"><a href="{{ cv.location_url }}">{{ cv.location }}</a></div>
+  		
+  	{% endif %}
+  	
+  	{% if cv.description %}
+	  	<div class="cv-description">
+	  		<ul>
+	  			<li></li>
+	  		</ul>
+	  	</div>
+  	
+  	{% endif %}
+  </div>
+</div>

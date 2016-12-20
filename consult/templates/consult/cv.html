@@ -8,6 +8,13 @@
 
 
 {% block content %}
-<h1>Alex Little - CV/Resume</h1>
+<h1>{% trans 'Alex Little - CV/Resume' %}</h1>
+
+{% if experience %}
+	<h2>{% trans 'Experience' %}</h2>
+	{% for cv in experience %}
+		{% include "consult/includes/cv-row.html" %}
+	{% endfor %}
+{% endif %}
 
 {% endblock %}
