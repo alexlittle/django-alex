@@ -3,11 +3,29 @@
 {% load staticfiles %}
 
 {% block extra_head_title %}
-	{% trans 'Alex Little Consulting Services' %}
+	{% trans 'Alex Little' %}
 {% endblock extra_head_title %}
 
 
 {% block content %}
-<h1>Alex Little Consulting Services</h1>
+<h1>Alex Little</h1>
+
+<p class="home-intro">Hi, I'm a technical developer and advisor, specialising in mobile learning and educational technology for low-resource environments.</p>
+
+<p class="home-intro">Over the last years, I've supported the implementation of a range technologies to help improve the training of rural health 
+workers, mainly in Ethiopia, but also in Nigeria, India, Zambia, Ghana and Pakistan.</p>
+
+<p class="home-intro">I'm a keen proponent of the use of <a href="https://en.wikipedia.org/wiki/Open-source_model" target="_blank">Open Source Software</a>, <a href="http://creativecommons.org" target="_blank">Creative Commons</a> 
+licensing and the <a href="http://digitalprinciples.org/" target="_blank">Principles for Digital Development</a>.</p>
+
+<p class="home-intro">If you would like to find out more about how I could support your work and organisation then please <a href="mailto:consult@alexlittle.net">contact me</a>.</p>
+
+<p class="home-intro">Here is a selection of my current work:</p>
+
+{% if projects %}
+	{% for project in projects %}
+		{% include "consult/includes/project-row.html" %}
+	{% endfor %}
+{% endif %}
 
 {% endblock %}

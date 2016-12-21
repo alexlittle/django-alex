@@ -16,4 +16,11 @@
 	{% endfor %}
 {% endif %}
 
+{% if other %}
+	<h2>{% trans 'Conferences, Workshops and Publications' %}</h2>
+	{% for cv in other %}
+		{% include "consult/includes/cv-row.html" %}
+	{% endfor %}
+{% endif %}
+
 {% endblock %}

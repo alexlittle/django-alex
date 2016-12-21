@@ -111,15 +111,25 @@ body {
 /* h tags
 -------------------------------------------------- */
 
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
 h1 {
 	color: #04689a;
 	font-size: 150%;
-	margin-bottom: 40px;
 }
 
 h2 {
 	color: #04689a;
 	font-size: 130%;
+}
+
+p.home-intro {
+	margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 130%;
 }
 
 /* page styles */
@@ -139,11 +149,23 @@ h2 {
 }
 
 .cv-organisation {
-	font-weight:bold;
+	font-weight:normal;
 }
 
 .cv-description {
 	margin-top:10px;
+}
+
+.project-row  {
+	margin-top:30px;
+}
+
+.project-row h2 {
+	margin-top:10px;
+}
+
+.project-row img {
+	border: none ;
 }
 
 /* RESPONSIVE CSS
