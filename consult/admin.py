@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from consult.models import CV, CVDetail, Project
+from consult.models import CV, CVDetail, Project, Tracker
 
 # Register your models here.
 class CVAdmin(admin.ModelAdmin):
@@ -13,6 +13,10 @@ class CVDetailAdmin(admin.ModelAdmin):
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('title', 'description', 'order_by')     
     
+class TrackerAdmin(admin.ModelAdmin):
+    list_display = ('tracker_date', 'ip', 'url', 'agent') 
+    
 admin.site.register(CV, CVAdmin)  
 admin.site.register(CVDetail, CVDetailAdmin)  
-admin.site.register(Project, ProjectAdmin)  
+admin.site.register(Project, ProjectAdmin) 
+admin.site.register(Tracker, TrackerAdmin)  

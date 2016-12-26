@@ -51,3 +51,12 @@ class Project (models.Model):
     
     def __unicode__(self):
         return self.title
+    
+class Tracker (models.Model):
+    tracker_date = models.DateTimeField('date tracked',default=timezone.now)
+    ip = models.GenericIPAddressField()
+    agent = models.TextField(blank=True)
+    url = models.TextField(blank=True, null=True, default=None)
+    
+    def __unicode__(self):
+        return self.ip
