@@ -1,0 +1,50 @@
+[
+{
+    "fields": {
+        "order_by": 0,
+        "description": "mPowering\u2019s ORB content platform connects  frontline health workers and trainers to high-quality, mobile-optimized training and informational content.  It allows health workers to access customized continuing and refresher training, and, by sharing materials with a global audience, reduces duplication of effort by content developers. ORB brings into one space curated, quality- assured, multimedia materials from multiple content developers; and the content covers the RMNCH spectrum for health workers and supervisors. ORB promotes openly licensed content, encourages re-use and adaptation of content to reduce duplication of time and effort, and improves access to access to mobile-optimized learning content so that training can reach significantly more health workers.  ",
+        "title": "ORB",
+        "image": "projects/ORB-cropped.png",
+        "date_display": "",
+        "date": "2016-12-20T23:41:06Z",
+        "location": "",
+        "active": true,
+        "title_url": "http://health-orb.org",
+        "location_url": ""
+    },
+    "model": "consult.project",
+    "pk": 1
+},
+{
+    "fields": {
+        "order_by": 0,
+        "description": "OppiaMobile is an open source mobile learning platform from Digital Campus for delivering learning content, video and quizzes. All the content and activities can be accessed and used even when no internet connection is available. When a connection becomes available, tracking and quiz scores are sent back to the server for tutors, teachers and trainers to track the progress of their learners. Learners earn points and badges for completing activities and modules.",
+        "title": "OppiaMobile",
+        "image": "projects/dc-logo.png",
+        "date_display": "",
+        "date": "2016-12-20T23:41:20Z",
+        "location": "",
+        "active": true,
+        "title_url": "https://digital-campus.org/oppiamobile/overview/",
+        "location_url": ""
+    },
+    "model": "consult.project",
+    "pk": 2
+},
+{
+    "fields": {
+        "order_by": 0,
+        "description": "",
+        "title": "Open Deliver",
+        "image": "",
+        "date_display": "",
+        "date": "2016-12-20T23:41:32Z",
+        "location": "",
+        "active": false,
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.project",
+    "pk": 3
+}
+]

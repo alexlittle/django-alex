@@ -1,0 +1,101 @@
+[
+{
+    "fields": {
+        "order_by": 1,
+        "cv": 26,
+        "description": "Moderator for 'Enabling Interoperability'"
+    },
+    "model": "consult.cvdetail",
+    "pk": 2
+},
+{
+    "fields": {
+        "order_by": 2,
+        "cv": 26,
+        "description": "Panelist for 'The Digital Health Knowledge Base - Content, and Taxonomies, and Platforms, Oh My!'"
+    },
+    "model": "consult.cvdetail",
+    "pk": 3
+},
+{
+    "fields": {
+        "order_by": 3,
+        "cv": 26,
+        "description": "Presenter for 'Mobile Content Distribution for Health Worker Training'"
+    },
+    "model": "consult.cvdetail",
+    "pk": 4
+},
+{
+    "fields": {
+        "order_by": 1,
+        "cv": 33,
+        "description": "Presented ' <a href=\"http://www.slideshare.net/alextlittle/mobile-learning-for-health-workers-telspain-nov-2013\">OppiaMobile Learning Platform</a>'"
+    },
+    "model": "consult.cvdetail",
+    "pk": 5
+},
+{
+    "fields": {
+        "order_by": 1,
+        "cv": 34,
+        "description": "Presented ' <a href=\"http://www.slideshare.net/alextlittle/mobile-learning-for-health-workers-daesav-2013\">Mobile Learning for Health Workers</a>'"
+    },
+    "model": "consult.cvdetail",
+    "pk": 6
+},
+{
+    "fields": {
+        "order_by": 1,
+        "cv": 35,
+        "description": "Presented '<a href=\"http://www.slideshare.net/alextlittle/using-mobile-technologies-to-improve-maternal-health\">Using Mobile Technologies to Improve Maternal Health</a>'"
+    },
+    "model": "consult.cvdetail",
+    "pk": 7
+},
+{
+    "fields": {
+        "order_by": 1,
+        "cv": 36,
+        "description": "Presented '<a href=\"http://www.slideshare.net/alextlittle/elearning-africa-overcoming-challenges-in-multimedia-delivery\">Overcoming Challenges for Effective Multimedia Delivery</a>'"
+    },
+    "model": "consult.cvdetail",
+    "pk": 8
+},
+{
+    "fields": {
+        "order_by": 1,
+        "cv": 38,
+        "description": "Presented '<a href=\"http://www.slideshare.net/alextlittle/digital-campus\">An Integrated Model to support eLearning at Higher Education Institutions in Africa</a>'"
+    },
+    "model": "consult.cvdetail",
+    "pk": 9
+},
+{
+    "fields": {
+        "order_by": 1,
+        "cv": 39,
+        "description": "Keynote, '<a href=\"http://www.slideshare.net/alextlittle/moodlemoot2008-padova-italy\">Introduction to OpenLearn</a>'"
+    },
+    "model": "consult.cvdetail",
+    "pk": 10
+},
+{
+    "fields": {
+        "order_by": 1,
+        "cv": 42,
+        "description": "Presented 'OpenLearn: Open Source VLE'"
+    },
+    "model": "consult.cvdetail",
+    "pk": 11
+},
+{
+    "fields": {
+        "order_by": 1,
+        "cv": 40,
+        "description": "Presented 'MSG Instant Messenger: social presence and location for the ad hoc learning experience'"
+    },
+    "model": "consult.cvdetail",
+    "pk": 12
+}
+]

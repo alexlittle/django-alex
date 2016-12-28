@@ -1,0 +1,737 @@
+[
+{
+    "fields": {
+        "description": "",
+        "title": "Knowledge Management Advisor",
+        "date_display": "2014-present",
+        "date": "2014-12-19T22:08:43Z",
+        "location": "mPowering Frontline Health Workers, USA",
+        "active": true,
+        "type": "Experience",
+        "title_url": "",
+        "location_url": "http://mpoweringhealth.org/"
+    },
+    "model": "consult.cv",
+    "pk": 1
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Director",
+        "date_display": "2011-present",
+        "date": "2011-12-19T23:26:01Z",
+        "location": " Digital Campus, UK",
+        "active": true,
+        "type": "Experience",
+        "title_url": "",
+        "location_url": "https://digital-campus.org/"
+    },
+    "model": "consult.cv",
+    "pk": 2
+},
+{
+    "fields": {
+        "description": "",
+        "title": "IT and eLearning Project Manager",
+        "date_display": "2010-2012",
+        "date": "2010-12-20T18:15:34Z",
+        "location": "Universidad de Alcal\u00e1, Spain",
+        "active": true,
+        "type": "Experience",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 3
+},
+{
+    "fields": {
+        "description": "",
+        "title": "IT and eLearning Advisor",
+        "date_display": "2008-2010",
+        "date": "2008-12-20T22:16:20Z",
+        "location": "Mekelle University, Ethiopia",
+        "active": true,
+        "type": "Experience",
+        "title_url": "",
+        "location_url": "http://www.mu.edu.et/"
+    },
+    "model": "consult.cv",
+    "pk": 4
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Lead Developer in Social Software",
+        "date_display": "2006-2008",
+        "date": "2006-12-20T22:18:42Z",
+        "location": "Knowledge Media Institute, Open University, UK",
+        "active": true,
+        "type": "Experience",
+        "title_url": "",
+        "location_url": "http://kmi.open.ac.uk/"
+    },
+    "model": "consult.cv",
+    "pk": 5
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Senior Developer",
+        "date_display": "2001-2008",
+        "date": "2001-12-20T22:19:31Z",
+        "location": "Institute of Educational Technology, Open University, UK",
+        "active": true,
+        "type": "Experience",
+        "title_url": "",
+        "location_url": "http://iet.open.ac.uk/"
+    },
+    "model": "consult.cv",
+    "pk": 6
+},
+{
+    "fields": {
+        "description": "",
+        "title": "USAID Global Development Lab Co-Creation Workshop",
+        "date_display": "12-14 Nov 2015",
+        "date": "2015-11-12T22:46:32Z",
+        "location": "Washington DC, USA",
+        "active": true,
+        "type": "Workshop",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 7
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Software Development Postgraduate Diploma",
+        "date_display": "Sept 1996 \u2013 July 1997",
+        "date": "1996-09-01T04:37:30Z",
+        "location": "Leeds Metropolitan University, UK",
+        "active": true,
+        "type": "Education",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 8
+},
+{
+    "fields": {
+        "description": "",
+        "title": "BSc Hons Degree Mathematics",
+        "date_display": "Oct 1991 \u2013 June 1994",
+        "date": "1991-10-01T04:38:23Z",
+        "location": "Leeds University, UK",
+        "active": true,
+        "type": "Education",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 9
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Moodle Course Creator Certificate",
+        "date_display": "April 2010",
+        "date": "2010-04-01T04:39:37Z",
+        "location": "Verify my certificate",
+        "active": true,
+        "type": "Courses",
+        "title_url": "",
+        "location_url": "http://certificates.moodle.com/manage/view.php?code=M7VV-6RDS-Q6ZC-6USD"
+    },
+    "model": "consult.cv",
+    "pk": 10
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Training Skills",
+        "date_display": "12-15 August 2008",
+        "date": "2008-08-12T04:40:35Z",
+        "location": "VSO",
+        "active": true,
+        "type": "Courses",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 11
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Skills for Working in Development (SKWID)",
+        "date_display": "2-6 July 2008",
+        "date": "2008-07-02T04:41:04Z",
+        "location": "VSO",
+        "active": true,
+        "type": "Courses",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 12
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Improving your Negotiating Skills",
+        "date_display": "June 2008",
+        "date": "2008-06-01T04:41:31Z",
+        "location": "Open University, UK",
+        "active": true,
+        "type": "Courses",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 13
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Effective Leadership Skills ",
+        "date_display": "March 2008",
+        "date": "2008-03-01T04:42:03Z",
+        "location": "Open University, UK",
+        "active": true,
+        "type": "Courses",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 14
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Web Component Development with Java",
+        "date_display": "25 \u2013 29 July 2005",
+        "date": "2005-07-25T04:42:39Z",
+        "location": "Sun Educational Services",
+        "active": true,
+        "type": "Courses",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 15
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Understanding Law (W200)",
+        "date_display": "Feb \u2013 Oct 2005",
+        "date": "2005-02-01T04:43:17Z",
+        "location": "Open University, UK",
+        "active": true,
+        "type": "Courses",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 16
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Law, the Internet and Society: technology and the future of ideas (T182)",
+        "date_display": "May 2004 \u2013 July 2004",
+        "date": "2004-05-01T04:43:52Z",
+        "location": "Open University, UK",
+        "active": true,
+        "type": "Courses",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 17
+},
+{
+    "fields": {
+        "description": "",
+        "title": " \tSoftware Development for Networked Applications using Java (M874)",
+        "date_display": "Nov 2003 \u2013 Apr 2004",
+        "date": "2003-11-01T04:44:19Z",
+        "location": "Open University, UK",
+        "active": true,
+        "type": "Courses",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 18
+},
+{
+    "fields": {
+        "description": " PLoS ONE 8(10): e77563. doi:10.1371/journal.pone.00775",
+        "title": "Meeting Community Health Worker Needs for Maternal Health Care Service Delivery Using Appropriate Mobile Technologies in Ethiopia",
+        "date_display": "2013",
+        "date": "2013-01-01T04:46:15Z",
+        "location": "Little A, Medhanyie A, Yebyo H, Spigt M, Dinant G-J, et al. (2013)",
+        "active": true,
+        "type": "Publication",
+        "title_url": "http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0077563",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 19
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Moodle 2.0 Multimedia Cookbook",
+        "date_display": "2011",
+        "date": "2011-05-01T04:50:51Z",
+        "location": "Reviewer, Packt Publishing",
+        "active": true,
+        "type": "Publication",
+        "title_url": "http://www.packtpub.com/moodle-2-0-multimedia-cookbook/book",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 20
+},
+{
+    "fields": {
+        "description": "For the handbook Social Software and developing Community Ontology, by IGI group",
+        "title": "Using knowledge media tools to foster open learning communities",
+        "date_display": "2008",
+        "date": "2008-01-01T04:52:45Z",
+        "location": "Okada, A., Tomadaki, E., Little, A. and Bachler, M. (2008)",
+        "active": true,
+        "type": "Publication",
+        "title_url": "https://www.researchgate.net/publication/266892893_Using_knowledge_media_tools_to_foster_open_learning_communities",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 21
+},
+{
+    "fields": {
+        "description": "Journal of Interactive Media in Education",
+        "title": " Social Presence and Location for the \u201cAd Hoc Learning Experience\u201d",
+        "date_display": "2008",
+        "date": "2008-01-01T05:03:40Z",
+        "location": "Alex Little, Chris Denham, and Marc Eisenstadt (2008)",
+        "active": true,
+        "type": "Publication",
+        "title_url": "http://jime.open.ac.uk/2008/02/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 22
+},
+{
+    "fields": {
+        "description": "ISSN 1436-4522. IEEE Educational Technology and Society",
+        "title": "Learning Design, generic service descriptions and universal acid",
+        "date_display": "2006",
+        "date": "2006-01-01T05:04:21Z",
+        "location": "Weller, M, Little, A., McAndrew, P. & Woods, W. (2006)",
+        "active": true,
+        "type": "Publication",
+        "title_url": "http://www.ifets.info/issues.php?id=30",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 23
+},
+{
+    "fields": {
+        "description": "Journal of Interactive Media in Education (Advances in Learning Design. Special Issue, eds. Colin Tattersall, Rob Koper), 2005/14. ISSN:1365-893X",
+        "title": "Developing an approach for Learning Design Players",
+        "date_display": "2005",
+        "date": "2005-01-01T05:05:24Z",
+        "location": "McAndrew, P., Nadolski, R. and Little, A. (2005)",
+        "active": true,
+        "type": "Publication",
+        "title_url": "http://jime.open.ac.uk/2005/14/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 24
+},
+{
+    "fields": {
+        "description": "Presented at AusWeb 2004, GoldCoast, Australia 3-7 July 2004",
+        "title": "Implementing Learning Design to support web-based learning",
+        "date_display": "2004",
+        "date": "2004-07-03T05:07:27Z",
+        "location": "McAndrew, P., Woods, W.I.S., Little, A., Weller, M.J., Koper, R. & Vogten, H. (2004)",
+        "active": true,
+        "type": "Publication",
+        "title_url": "http://www.ausweb.scu.edu.au/aw04/papers/refereed/mcandrew",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 25
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Global Digital Health Forum",
+        "date_display": "13-14 Dec 2016",
+        "date": "2016-12-13T05:27:50Z",
+        "location": "Washington DC, USA",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://www.pchaconference.org/global-health-forum",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 26
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Global mHealth Summit",
+        "date_display": "10-11 Nov 2015",
+        "date": "2015-11-10T05:29:46Z",
+        "location": "Washington DC, USA",
+        "active": true,
+        "type": "Conference",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 27
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Diarrhea and Pneumonia Working Group",
+        "date_display": "3-4 Nov 2015",
+        "date": "2015-11-03T05:30:19Z",
+        "location": "Washington DC, USA",
+        "active": true,
+        "type": "Workshop",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 28
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Global Maternal and Newborn Health Conference",
+        "date_display": "19-21 Oct 2015",
+        "date": "2015-10-19T05:30:49Z",
+        "location": "Mexico City, Mexico",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://www.globalmnh2015.org/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 29
+},
+{
+    "fields": {
+        "description": "",
+        "title": "CORE Group \u2013 Global Health Practitioner Conference",
+        "date_display": "15 Apr 2015",
+        "date": "2015-04-15T05:31:26Z",
+        "location": "Alexandria, DC, USA",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://www.coregroup.org/component/events/event/135",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 30
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Global mHealth Forum",
+        "date_display": "10-11 Dec 2014",
+        "date": "2014-12-10T05:33:35Z",
+        "location": "Washington DC, USA",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://www.mhealthsummit.org/globalmhealthforum",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 31
+},
+{
+    "fields": {
+        "description": "",
+        "title": "GETHealth",
+        "date_display": "13-14 Nov 2014",
+        "date": "2014-11-13T05:34:06Z",
+        "location": "Dublin, Ireland",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://www.gethealthsummit.org/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 32
+},
+{
+    "fields": {
+        "description": "",
+        "title": "TelSpain 2013",
+        "date_display": "29 Nov 2013",
+        "date": "2013-11-29T05:34:43Z",
+        "location": "Madrid, Spain",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://jornada2013.telspain.es/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 33
+},
+{
+    "fields": {
+        "description": "",
+        "title": "DaeSav 2013",
+        "date_display": "4-5 Oct 2013",
+        "date": "2013-10-04T05:35:51Z",
+        "location": "Berlin, Germany",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://www.daesav.de/BerlinConference/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 34
+},
+{
+    "fields": {
+        "description": "",
+        "title": "BarCamp Ethiopia",
+        "date_display": "23-24 Sept 2011",
+        "date": "2011-09-23T05:36:23Z",
+        "location": "Addis Ababa, Ethiopia",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://barcampethiopia.wordpress.com/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 35
+},
+{
+    "fields": {
+        "description": "",
+        "title": "eLearning Africa 2011",
+        "date_display": "25-27 May 2011",
+        "date": "2011-05-25T05:37:01Z",
+        "location": "Dar es Salaam, Tanzania",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://www.elearning-africa.com/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 36
+},
+{
+    "fields": {
+        "description": "",
+        "title": "BarCamp Ethiopia",
+        "date_display": "17-18 Sept 2010",
+        "date": "2010-09-17T05:37:42Z",
+        "location": "Addis Ababa, Ethiopia",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://barcamp.org/BarCampEthiopia",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 37
+},
+{
+    "fields": {
+        "description": "",
+        "title": "eLearning Africa 2010",
+        "date_display": "27-28 May 2010",
+        "date": "2010-05-27T05:44:15Z",
+        "location": "Lusaka, Zambia",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://www.elearning-africa.com/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 38
+},
+{
+    "fields": {
+        "description": "",
+        "title": "MoodleMoot08",
+        "date_display": "9-10 May 2008",
+        "date": "2008-05-09T05:44:49Z",
+        "location": "Padova University, Italy",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://moodlemoot2008.scform.unipd.it/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 39
+},
+{
+    "fields": {
+        "description": "",
+        "title": "OpenLearn Conference",
+        "date_display": "30-31 Oct 2007",
+        "date": "2007-10-30T05:45:26Z",
+        "location": "Open University, UK",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://kn.open.ac.uk/public/workspace.cfm?wpid=7979",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 40
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Future of Web Apps Expo",
+        "date_display": "3-5 Oct 2007",
+        "date": "2007-10-03T05:46:00Z",
+        "location": "London",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://futureofwebapps.com/pastevents.html",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 41
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Sussex Learning Network conference",
+        "date_display": "9 May 2007",
+        "date": "2007-05-09T05:46:33Z",
+        "location": "Brighton, UK",
+        "active": true,
+        "type": "Conference",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 42
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Future of Web Apps (FOWA)",
+        "date_display": "20-21 Feb 2007",
+        "date": "2007-02-20T05:47:10Z",
+        "location": "London",
+        "active": true,
+        "type": "Conference",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 43
+},
+{
+    "fields": {
+        "description": "",
+        "title": "Alt-i-Lab 2005 \u2013 Advancing Learning Technology Interoperability",
+        "date_display": "20-22 June 2005",
+        "date": "2005-06-20T05:47:41Z",
+        "location": "Sheffield, UK",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://www.imsglobal.org/altilab/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 44
+},
+{
+    "fields": {
+        "description": "",
+        "title": "UNFOLD",
+        "date_display": "15-17 June 2005",
+        "date": "2005-06-15T05:48:39Z",
+        "location": "Minho University, Braga, Portugal",
+        "active": true,
+        "type": "Conference",
+        "title_url": "http://www.unfold-project.net/about_folder/events/cops/portugal/",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 45
+},
+{
+    "fields": {
+        "description": "",
+        "title": "eLearning Results 2004 & IMS Learning Design Workshop",
+        "date_display": "12-14 May 2004",
+        "date": "2004-05-12T05:49:26Z",
+        "location": "GiuntiLabs, Sestri Levante, Italy",
+        "active": true,
+        "type": "Conference",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 46
+},
+{
+    "fields": {
+        "description": "",
+        "title": "European Academic Software Awards",
+        "date_display": "23-25 Nov 2002",
+        "date": "2002-11-23T05:50:39Z",
+        "location": "Ronneby, Sweden",
+        "active": true,
+        "type": "Conference",
+        "title_url": "",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 47
+},
+{
+    "fields": {
+        "description": "This report shares an initial blueprint to create a scalable, locally sustainable, end-to-end content distribution process that uses mobile technology to provide frontline health workers access to relevant health content.",
+        "title": "Establishing a Global End-to-End Mobile Content Distribution Process for Health Workers",
+        "date_display": "2015",
+        "date": "2015-07-08T06:22:35Z",
+        "location": "mPowering Frontline Health Workers, sponsored by Qualcomm",
+        "active": true,
+        "type": "Publication",
+        "title_url": "http://mpoweringhealth.org/wp-content/uploads/2015/06/ORB-White-Paper-v1r10-Screen-Res.pdf",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 48
+},
+{
+    "fields": {
+        "description": "",
+        "title": "mHero: Video and Gamification Integration Options",
+        "date_display": "2016",
+        "date": "2016-08-29T06:26:56Z",
+        "location": "In collaboration with IntraHealth",
+        "active": true,
+        "type": "Publication",
+        "title_url": "http://files.www.mhero.org/news-stories/mHero_Training_Delivery_Options_final.pdf",
+        "location_url": ""
+    },
+    "model": "consult.cv",
+    "pk": 49
+}
+]

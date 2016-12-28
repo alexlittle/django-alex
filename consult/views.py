@@ -24,7 +24,7 @@ def cv_view(request):
     
     publications = CV.objects.filter(active=True, type='publication').order_by('-date')
     
-    conferences = CV.objects.filter(active=True).filter(Q(type='workshop') | Q(type='presentation')).order_by('-date')
+    conferences = CV.objects.filter(active=True).filter(Q(type='workshop') | Q(type='presentation') | Q(type='conference')).order_by('-date')
     
     return render_to_response('consult/cv.html',
                           {'cv_active': True,
