@@ -16,9 +16,16 @@
 	{% endfor %}
 {% endif %}
 
-{% if other %}
-	<h2>{% trans 'Conferences, Workshops and Publications' %}</h2>
-	{% for cv in other %}
+{% if publications %}
+	<h2>{% trans 'Publications' %}</h2>
+		{% for cv in publications %}
+		{% include "consult/includes/cv-row.html" %}
+	{% endfor %}
+{% endif %}
+
+{% if conferences %}
+	<h2>{% trans 'Conferences and Workshops' %}</h2>
+		{% for cv in conferences %}
 		{% include "consult/includes/cv-row.html" %}
 	{% endfor %}
 {% endif %}

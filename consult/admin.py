@@ -2,11 +2,10 @@ from django.contrib import admin
 
 from consult.models import CV, CVDetail, Project, Tracker
 
-# Register your models here.
 class CVAdmin(admin.ModelAdmin):
     list_display = ('title',  'date_display', 'date', 'active')
+    search_fields = ['title','location', 'description']
     
-  
 class CVDetailAdmin(admin.ModelAdmin):
     list_display = ('cv', 'description', 'order_by')
  

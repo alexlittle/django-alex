@@ -22,12 +22,15 @@ def cv_view(request):
     
     experience = CV.objects.filter(active=True, type='experience').order_by('-date')
     
-    other = CV.objects.filter(active=True).filter(Q(type='workshop') | Q(type='presentation') | Q(type='publication')).order_by('-date')
+    publications = CV.objects.filter(active=True, type='publication').order_by('-date')
+    
+    conferences = CV.objects.filter(active=True).filter(Q(type='workshop') | Q(type='presentation')).order_by('-date')
     
     return render_to_response('consult/cv.html',
                           {'cv_active': True,
                            'experience': experience, 
-                           'other': other, }, 
+                           'publications': publications, 
+                           'conferences': conferences,}, 
                           context_instance=RequestContext(request))
     
 def contact_view(request):
