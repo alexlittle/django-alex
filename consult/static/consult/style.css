@@ -168,6 +168,12 @@ p.home-intro {
 	border: none ;
 }
 
+p.company-reg {
+	padding-bottom: 20px;
+	text-align: center;
+	
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
