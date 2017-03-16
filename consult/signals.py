@@ -10,9 +10,6 @@ site_tracker = Signal(providing_args=["request", "data"])
 def site_tracker_callback(sender, **kwargs):
     request = kwargs.get('request')
     data = kwargs.get('data')
-
-    print request.user
-    print request.build_absolute_uri()
     
     t = Tracker()
     t.url = request.build_absolute_uri()
@@ -21,8 +18,6 @@ def site_tracker_callback(sender, **kwargs):
     t.save()
     
     return
-
-
 
 
 site_tracker.connect(site_tracker_callback)
