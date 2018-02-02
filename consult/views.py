@@ -4,17 +4,24 @@ from django.shortcuts import render
 from django.utils.translation import ugettext_lazy as _
 from django.template import RequestContext
 
-from consult.models import CV, CVDetail, Project, Tracker
+from consult.models import CV, CVDetail, Project, Tracker, Page
 from consult.signals import site_tracker
+
+def get_page(slug):
+    try:
+        page = Page.objects.get(slug='home',active=True)
+    except Page.DoesNotExist:
+        return None
+    return page
 
 def home_view(request):
     site_tracker.send(sender=None, request=request)
-    
     projects = Project.objects.filter(active=True).order_by('order_by')
     
     return render(request, 'consult/home.html',
                           {'home_active': True,
-                           'projects': projects, })
+                           'projects': projects,
+                           'page': get_page('home') })
     
 def cv_view(request):
     site_tracker.send(sender=None, request=request)

@@ -8,25 +8,25 @@
 
 
 {% block content %}
-<h1>Alex Little - Contact</h1>
+<h1>{% trans 'Alex Little - Contact' %}</h1>
 
 
 <div class="row al-row">
-  <div class="col-sm-2 contact-type">Email:</div>
+  <div class="col-sm-2 contact-type">{% trans 'Email:' %}</div>
   <div class="col-sm-4"><a href="mailto:consult@alexlittle.net">consult@alexlittle.net</a></div>
 </div>
 
 <div class="row al-row">
-  <div class="col-sm-2 contact-type">Skype:</div>
+  <div class="col-sm-2 contact-type">{% trans 'Skype:' %}</div>
   <div class="col-sm-4">alexlittleou</div>
 </div>
 
 <div class="row al-row">
-  <div class="col-sm-2 contact-type">Phone:</div>
+  <div class="col-sm-2 contact-type">{% trans 'Phone:' %}</div>
   <div class="col-sm-4">+358 45 640 2013</div>
 </div>
 
-<p>I'm based in <a href="http://www.openstreetmap.org/node/30969521#map=3/66.62/40.43">Joensuu, Finland</a>:</p>
+<p>{% trans 'I'm based in' %} <a href="http://www.openstreetmap.org/node/30969521#map=3/66.62/40.43">Joensuu, Finland</a>:</p>
 
 <a href="http://www.openstreetmap.org/node/30969521#map=3/66.62/40.43">
 	<img src="{% static "consult/joensuu.png" %}">

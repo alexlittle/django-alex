@@ -1,6 +1,11 @@
 from django.contrib import admin
 
-from consult.models import CV, CVDetail, Project, Tracker
+from consult.models import CV, CVDetail, Project, Tracker, Page
+
+
+class PageAdmin(admin.ModelAdmin):
+    list_display = ('title',  'menu_title', 'slug', 'active')
+    search_fields = ['title',  'menu_title', 'slug', 'content']
 
 class CVAdmin(admin.ModelAdmin):
     list_display = ('title',  'date_display', 'date', 'active')
@@ -14,7 +19,8 @@ class ProjectAdmin(admin.ModelAdmin):
     
 class TrackerAdmin(admin.ModelAdmin):
     list_display = ('tracker_date', 'ip', 'url', 'agent') 
-    
+
+admin.site.register(Page, PageAdmin)      
 admin.site.register(CV, CVAdmin)  
 admin.site.register(CVDetail, CVDetailAdmin)  
 admin.site.register(Project, ProjectAdmin) 

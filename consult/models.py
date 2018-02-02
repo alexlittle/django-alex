@@ -1,7 +1,19 @@
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
+
+
+class Page (models.Model):
+    active = models.BooleanField(default=False)
+    title = models.CharField(max_length=300, blank=False, null=False)
+    menu_title = models.CharField(max_length=30, blank=False, null=False)
+    slug = models.CharField(max_length=30, blank=False, null=False)
+    template = models.CharField(max_length=30, blank=False, null=False)
+    content = models.TextField(blank=True, null=True, default=None)
+    
+    def __unicode__(self):
+        return self.title
+
 CV_TYPE = (
         ('Experience', 'Experience'),
         ('Presentation', 'Presentation'),

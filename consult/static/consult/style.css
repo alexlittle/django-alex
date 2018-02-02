@@ -126,10 +126,13 @@ h2 {
 	font-size: 130%;
 }
 
-p.home-intro {
+.content-text {
+    font-size: 130%;
+}
+
+.content-text p {
 	margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 130%;
 }
 
 /* page styles */
