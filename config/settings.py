@@ -23,7 +23,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost.consult']
 
 ADMINS = (
-    ('Admin', 'org@example.com'),
+    ('Alex Little', 'consult@alexlittle.net'),
 )
 
 SITE_ID = 1
