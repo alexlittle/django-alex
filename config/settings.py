@@ -99,7 +99,7 @@ USE_TZ = True
 #####################################################################
 # Static assets & media uploads
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'consult/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'consult', 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -171,4 +171,4 @@ try:
     from local_settings import *  # noqa
 except ImportError:
     import warnings
-    warnings.warn("Using default settings. Add `config.local_settings.py` for custom settings.")
+    warnings.warn("Using default settings. Add `config/local_settings.py` for custom settings.")
