@@ -18,9 +18,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
-DEBUG = True
-
-ALLOWED_HOSTS = ['localhost.consult']
+try:
+    from local_settings import *  # noqa
+except ImportError:
+    import warnings
+    warnings.warn("Using default settings. Add `config/local_settings.py` for custom settings.")
 
 ADMINS = (
     ('Alex Little', 'consult@alexlittle.net'),
@@ -120,7 +122,6 @@ EMAIL_FILE_PATH = '/tmp/'
 # Authentication
 LOGIN_URL = urlresolvers.reverse_lazy('profile_login')
 AUTHENTICATION_BACKENDS =  [
-    'orb.auth.UserModelEmailBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
 #####################################################################
@@ -167,8 +168,4 @@ LOGGING = {
 #####################################################################
 
 
-try:
-    from local_settings import *  # noqa
-except ImportError:
-    import warnings
-    warnings.warn("Using default settings. Add `config/local_settings.py` for custom settings.")
+
