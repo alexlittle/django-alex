@@ -10,23 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
-import os,sys
-
-from django.core import urlresolvers
+import os
+import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__)) 
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
-try:
-    from local_settings import *  # noqa
-except ImportError:
-    import warnings
-    warnings.warn("Using default settings. Add `config/local_settings.py` for custom settings.")
-
 ADMINS = (
     ('Alex Little', 'consult@alexlittle.net'),
 )
+
+DEBUG = True
 
 SITE_ID = 1
 
@@ -50,14 +45,14 @@ INSTALLED_APPS = [
 ]
 
 
-MIDDLEWARE_CLASSES = [
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+MIDDLEWARE = [
+'django.middleware.security.SecurityMiddleware',
+'django.contrib.sessions.middleware.SessionMiddleware',
+'django.middleware.common.CommonMiddleware',
+'django.middleware.csrf.CsrfViewMiddleware',
+'django.contrib.auth.middleware.AuthenticationMiddleware',
+'django.contrib.messages.middleware.MessageMiddleware',
+'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 
@@ -120,7 +115,7 @@ EMAIL_FILE_PATH = '/tmp/'
 
 #####################################################################
 # Authentication
-LOGIN_URL = urlresolvers.reverse_lazy('profile_login')
+LOGIN_URL = ('/admin/login/')
 AUTHENTICATION_BACKENDS =  [
     'django.contrib.auth.backends.ModelBackend',
 ]
@@ -168,4 +163,9 @@ LOGGING = {
 #####################################################################
 
 
+try:
+    from local_settings import *  # noqa
+except ImportError:
+    import warnings
+    warnings.warn("Using default settings. Add `config/local_settings.py` for custom settings.")
 

@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='cvdetail',
             name='cv',
-            field=models.ForeignKey(related_name='details', to='consult.CV'),
+            field=models.ForeignKey(related_name='details', to='consult.CV', on_delete=models.CASCADE),
         ),
     ]

@@ -42,7 +42,7 @@ class CV (models.Model):
     
     
 class CVDetail (models.Model):
-    cv = models.ForeignKey(CV, related_name='details')
+    cv = models.ForeignKey(CV, related_name='details', on_delete=models.CASCADE)
     description = models.TextField(blank=True, null=True, default=None)
     order_by = models.IntegerField(default=0)
     

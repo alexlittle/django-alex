@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('description', models.TextField(default=None, null=True, blank=True)),
                 ('order_by', models.IntegerField(default=0)),
-                ('cv', models.ForeignKey(to='consult.CV')),
+                ('cv', models.ForeignKey(to='consult.CV', on_delete=models.CASCADE)),
             ],
         ),
     ]
