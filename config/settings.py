@@ -25,7 +25,7 @@ DEBUG = True
 
 SITE_ID = 1
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'config.urls'
 
 WSGI_APPLICATION = 'wsgi.application'
 
@@ -164,7 +164,7 @@ LOGGING = {
 
 
 try:
-    from local_settings import *  # noqa
+    from config.local_settings import *  # noqa
 except ImportError:
     import warnings
     warnings.warn("Using default settings. Add `config/local_settings.py` for custom settings.")
