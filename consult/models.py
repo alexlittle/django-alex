@@ -11,7 +11,7 @@ class Page (models.Model):
     template = models.CharField(max_length=30, blank=False, null=False)
     content = models.TextField(blank=True, null=True, default=None)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
 CV_TYPE = (
@@ -37,7 +37,7 @@ class CV (models.Model):
     date_display = models.CharField(max_length=300, blank=True, null=True)  
     description = models.TextField(blank=True, null=True, default=None)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.title
     
     
@@ -46,7 +46,7 @@ class CVDetail (models.Model):
     description = models.TextField(blank=True, null=True, default=None)
     order_by = models.IntegerField(default=0)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.description
     
     
@@ -62,7 +62,7 @@ class Project (models.Model):
     order_by = models.IntegerField(default=0)
     image = models.FileField(upload_to="projects",blank=True, default=None)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.title
     
 class Tracker (models.Model):
@@ -71,5 +71,5 @@ class Tracker (models.Model):
     agent = models.TextField(blank=True)
     url = models.TextField(blank=True, null=True, default=None)
     
-    def __unicode__(self):
+    def __str__(self):
         return self.ip
