@@ -1,5 +1,5 @@
 django==2.1.10
-django-crispy-forms==1.7.0
+django-crispy-forms==1.7.1
 python-dateutil==2.7.3
 Pillow==5.4.1
 sorl-thumbnail>=12.4,<13.0
