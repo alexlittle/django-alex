@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.template import RequestContext
 
 from consult.models import CV, CVDetail, Project, Tracker, Page
+from blog.models import  Blog
 from consult.signals import site_tracker
 
 def get_page(slug):
@@ -17,11 +18,13 @@ def get_page(slug):
 def home_view(request):
     site_tracker.send(sender=None, request=request)
     projects = Project.objects.filter(active=True).order_by('order_by')
+    news = Blog.objects.filter(active=True).order_by('-display_date')[:5]
     
     return render(request, 'consult/home.html',
                           {'home_active': True,
                            'projects': projects,
-                           'page': get_page('home') })
+                           'page': get_page('home'),
+                           'news': news })
     
 def cv_view(request):
     site_tracker.send(sender=None, request=request)

@@ -13,6 +13,13 @@
 	<div class="content-text">{{ page.content|safe }}</div>
 {% endif %}
 
+{% if news %}
+	<h2>{% trans 'News' %}</h2>
+	{% for post in news %}
+		{% include "blog/blog-row.html" %}
+	{% endfor %}
+{% endif %}
+
 <p class="content-text">{% trans 'My main focus is on the technical development and deployment of the OppiaMobile learning platform:' %}</p>
 
 {% if projects %}

@@ -19,9 +19,12 @@ class ProjectAdmin(admin.ModelAdmin):
     
 class TrackerAdmin(admin.ModelAdmin):
     list_display = ('tracker_date', 'ip', 'url', 'agent') 
+    
+
 
 admin.site.register(Page, PageAdmin)      
 admin.site.register(CV, CVAdmin)  
 admin.site.register(CVDetail, CVDetailAdmin)  
 admin.site.register(Project, ProjectAdmin) 
 admin.site.register(Tracker, TrackerAdmin)  
+

@@ -126,8 +126,10 @@ h2 {
 	font-size: 130%;
 }
 
+
+
 .content-text {
-    font-size: 130%;
+    font-size: 120%;
 }
 
 .content-text p {
@@ -169,6 +171,16 @@ h2 {
 
 .project-row img {
 	border: none ;
+}
+
+.blog-row  {
+	margin: 0 0 30px 0;
+}
+
+h3.blog {
+	margin-top: 0;
+	color: #04689a;
+	font-size: 120%;
 }
 
 p.company-reg {

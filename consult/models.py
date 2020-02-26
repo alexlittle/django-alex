@@ -1,8 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
-
-
+    
 class Page (models.Model):
     active = models.BooleanField(default=False)
     title = models.CharField(max_length=300, blank=False, null=False)

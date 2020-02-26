@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'crispy_forms',
     'sorl.thumbnail',
-    'consult'
+    'consult',
+    'ckeditor',
+    'blog'
 ]
 
 
