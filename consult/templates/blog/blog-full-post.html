@@ -7,13 +7,12 @@
 {% endblock extra_head_title %}
 
 {% block content %}
-<h1>{% trans 'News' %}</h1>
+{% if blog %}
+<h1>{{ blog.title }}</h1>
+<p>{{ blog.display_date }}</p>
 
-{% if page.object_list %}
-	{% for post in page.object_list %}
-		{% include "blog/blog-single.html" %}
-	{% endfor %}
-	
-	{% include "includes/pagination.html" %}
+{{ blog.body|safe }}
+
 {% endif %}
+
 {% endblock %}

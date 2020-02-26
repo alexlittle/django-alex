@@ -18,7 +18,7 @@ def get_page(slug):
 def home_view(request):
     site_tracker.send(sender=None, request=request)
     projects = Project.objects.filter(active=True).order_by('order_by')
-    news = Blog.objects.filter(active=True).order_by('-display_date')[:5]
+    news = Blog.objects.filter(active=True).order_by('-display_date')[:3]
     
     return render(request, 'consult/home.html',
                           {'home_active': True,

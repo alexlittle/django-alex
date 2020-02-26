@@ -6,9 +6,8 @@
   	{{ post.display_date|date:"d M Y" }}
   </div>
   <div class="col-sm-8">
-  	<h3 class="blog"><a href="{% url 'blog_article' post.slug %}">{{ post.title }}</a></h3>
-  	{{ post.body|safe|truncatechars_html:250 }}
-  	<p><a href="{% url 'blog_article' post.slug %}">{% trans 'more' %}</a></p>
+  	<h3 class="blog"><a href="{{ post.slug }}">{{ post.title }}</a></h3>
+  	{{ post.body|safe }}
   	
   </div>
   {% if post.image %}

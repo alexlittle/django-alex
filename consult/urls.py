@@ -8,5 +8,5 @@ urlpatterns = [
     url(r'^$', consult_views.home_view, name="consult_home"),
     url(r'^cv/$', consult_views.cv_view, name="consult_cv"),
     url(r'^contact/$', consult_views.contact_view, name="consult_contact"),
-    url(r'^blog/', include('blog.urls')),
+    url(r'^news/', include('blog.urls')),
 ]

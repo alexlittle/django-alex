@@ -6,4 +6,5 @@ from blog import views as blog_views
 
 urlpatterns = [
     url(r'^$', blog_views.home_view, name="blog_home"),
+    url(r'^(?P<blog_slug>\w[\w/-]*)$', blog_views.blog_view, name="blog_article"),
 ]
