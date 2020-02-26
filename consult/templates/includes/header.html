@@ -17,6 +17,7 @@
 	        <div id="navbar" class="collapse navbar-collapse">
 	          <ul class="nav navbar-nav">
 	          		<li {% if home_active == True %}class='active' {% endif %}><a href='{% url 'consult_home' %}'>{% trans 'Home' %}</a></li>
+	          		<li><a href='{% url 'blog_home' %}'>{% trans 'News' %}</a></li>
 	          		<li {% if cv_active == True %}class='active' {% endif %}><a href='{% url 'consult_cv' %}'>{% trans 'CV' %}</a></li>
 	          		<li {% if contact_active == True %}class='active' {% endif %}><a href='{% url 'consult_contact' %}'>{% trans 'Contact' %}</a></li>
 	          </ul>
