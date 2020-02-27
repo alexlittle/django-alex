@@ -38,6 +38,32 @@ body {
   padding-top:10px;
 }
 
+/* Customise the navbar */
+
+.navbar-light {
+	background-color: #f8ffff;
+  	border-bottom: 1px solid #2fcbfe;
+}
+
+.navbar-light .navbar-brand {
+	color: #5a5a5a;
+}
+
+.navbar-brand {
+	padding: 5px 20px 3px 10px;
+}
+
+.navbar-light .navbar-nav > .nav-item > a:focus, 
+.navbar-light .navbar-nav > .nav-item > a:hover 
+{
+	color: #04689a;
+}
+
+.navbar-light .navbar-nav > .active  a.nav-link, 
+.navbar-light .navbar-nav > .nav-item .active > a.nav-link:focus, 
+.navbar-light .navbar-nav > .nav-item .active > a.nav-link:hover {
+    color: #04689a;
+}
 
 /* Mapping
 -------------------------------------------------- */
