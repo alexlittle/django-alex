@@ -16,7 +16,7 @@
       <li class="nav-item {% if home_active == True %}active{% endif %}">
         <a href='{% url 'consult_home' %}' class="nav-link">{% trans 'Home' %}</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if blog_active == True %}active{% endif %}">
         <a href='{% url 'blog_home' %}' class="nav-link">{% trans 'News' %}</a>
       </li>
       <li class="nav-item {% if cv_active == True %}active{% endif %}">

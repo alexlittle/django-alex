@@ -21,10 +21,12 @@ def home_view(request):
         news = paginator.page(paginator.num_pages)
     
     return render(request, 'blog/home.html',
-                          {'page': news})
+                          {'page': news,
+                           'blog_active': True})
     
 def blog_view(request, blog_slug):
     blog = Blog.objects.get(slug=blog_slug)
     return render(request, 'blog/blog-full-post.html',
-                          {'blog': blog})
+                          {'blog': blog,
+                           'blog_active': True})
     
