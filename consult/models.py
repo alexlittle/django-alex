@@ -1,13 +1,15 @@
 from django.db import models
 from django.utils import timezone
-    
+from ckeditor.fields import RichTextField
+
+
 class Page (models.Model):
     active = models.BooleanField(default=False)
     title = models.CharField(max_length=300, blank=False, null=False)
     menu_title = models.CharField(max_length=30, blank=False, null=False)
     slug = models.CharField(max_length=30, blank=False, null=False)
     template = models.CharField(max_length=30, blank=False, null=False)
-    content = models.TextField(blank=True, null=True, default=None)
+    content = RichTextField(null=True, blank=True, default=None)
     
     def __str__(self):
         return self.title

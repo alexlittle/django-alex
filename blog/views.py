@@ -25,7 +25,12 @@ def home_view(request):
                            'blog_active': True})
     
 def blog_view(request, blog_slug):
-    blog = Blog.objects.get(slug=blog_slug)
+    site_tracker.send(sender=None, request=request)
+    preview = request.GET.get("preview", 0)
+    if preview == "1":
+        blog = Blog.objects.get(slug=blog_slug)
+    else:
+        blog = Blog.objects.get(slug=blog_slug, active=True)
     return render(request, 'blog/blog-full-post.html',
                           {'blog': blog,
                            'blog_active': True})
