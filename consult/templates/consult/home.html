@@ -10,7 +10,9 @@
 <h1>{% trans 'Alex Little' %}</h1>
 
 {% if page %}
-	<div class="content-text">{{ page.content|safe }}</div>
+	<div class="content-text">
+	<img class="profile" src="https://s.gravatar.com/avatar/999e64c7fdd6111396687b5b30643349?s=200" alt="Alex Little pofile photo"/>
+	{{ page.content|safe }}</div>
 {% endif %}
 
 {% if news %}
