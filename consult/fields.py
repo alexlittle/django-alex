@@ -1,5 +1,6 @@
 from autoslugged import AutoSlugField as BaseSlugField
 
+
 class AutoSlugField(BaseSlugField):
     """
     Redefined AutoSlugField with defaults selected

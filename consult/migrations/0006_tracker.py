@@ -15,8 +15,13 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Tracker',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('tracker_date', models.DateTimeField(default=django.utils.timezone.now, verbose_name=b'date tracked')),
+                ('id', models.AutoField(verbose_name='ID',
+                                        serialize=False,
+                                        auto_created=True,
+                                        primary_key=True)),
+                ('tracker_date', models.DateTimeField(
+                    default=django.utils.timezone.now,
+                    verbose_name=b'date tracked')),
                 ('ip', models.GenericIPAddressField()),
                 ('agent', models.TextField(blank=True)),
             ],

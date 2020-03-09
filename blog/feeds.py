@@ -1,7 +1,7 @@
 from django.contrib.syndication.views import Feed
-from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from blog.models import Blog
+
 
 class LatestNews(Feed):
     description_template = 'blog/feed.html'
@@ -17,6 +17,6 @@ class LatestNews(Feed):
 
     def item_body(self, item):
         return item.body
-    
+
     def item_link(self, item):
-        return reverse('blog_article', args={item.slug})
+        return reverse('blog:article', args={item.slug})

@@ -14,6 +14,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='page',
             name='content',
-            field=ckeditor.fields.RichTextField(blank=True, default=None, null=True),
+            field=ckeditor.fields.RichTextField(blank=True,
+                                                default=None,
+                                                null=True),
         ),
     ]

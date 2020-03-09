@@ -15,13 +15,18 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Page',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True,
+                                        serialize=False,
+                                        verbose_name='ID')),
                 ('active', models.BooleanField(default=False)),
                 ('title', models.CharField(max_length=300)),
                 ('menu_title', models.CharField(max_length=30)),
                 ('slug', models.CharField(max_length=30)),
                 ('template', models.CharField(max_length=30)),
-                ('content', models.TextField(blank=True, default=None, null=True)),
+                ('content', models.TextField(blank=True,
+                                             default=None,
+                                             null=True)),
             ],
         ),
     ]

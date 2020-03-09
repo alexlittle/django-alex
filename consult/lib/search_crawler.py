@@ -1,12 +1,12 @@
 
 
 def is_search_crawler(user_agent):
-    spiders = { 'bot',
-                'crawl',
-                'slurp',
-                'spider',
-                'archiver',
-                'facebook',
+    spiders = {'bot',
+               'crawl',
+               'slurp',
+               'spider',
+               'archiver',
+               'facebook',
                'Lycos',
                'Scooter',
                'AltaVista',
@@ -22,12 +22,11 @@ def is_search_crawler(user_agent):
                'Nutch',
                'ContextAd',
                'Pinterest',
-               'DeuSu',   
+               'DeuSu',
                'Go-http-client',
                'Yeti',
                'ltx71',
-               'qwantify',
-               }
+               'qwantify'}
     for s in spiders:
         if s.lower() in user_agent.lower():
             return True

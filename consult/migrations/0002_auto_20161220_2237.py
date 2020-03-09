@@ -14,6 +14,13 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='cv',
             name='type',
-            field=models.CharField(max_length=100, choices=[(b'Experience', b'Experience'), (b'Presentation', b'Presentation'), (b'Workshop', b'Workshop'), (b'Publication', b'Publication'), (b'Education', b'Education'), (b'Awards', b'Awards'), (b'Courses', b'Courses')]),
+            field=models.CharField(max_length=100,
+                                   choices=[(b'Experience', b'Experience'),
+                                            (b'Presentation', b'Presentation'),
+                                            (b'Workshop', b'Workshop'),
+                                            (b'Publication', b'Publication'),
+                                            (b'Education', b'Education'),
+                                            (b'Awards', b'Awards'),
+                                            (b'Courses', b'Courses')]),
         ),
     ]

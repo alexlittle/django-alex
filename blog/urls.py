@@ -1,13 +1,12 @@
-from django.conf import settings
-from django.conf.urls import include, url
-from django.views.generic import TemplateView
+from django.urls import path
 
 from blog import views as blog_views
 from blog.feeds import LatestNews
 
+app_name = 'blog'
+
 urlpatterns = [
-    url(r'^$', blog_views.home_view, name="blog_home"),
-    url(r'^feed/$', LatestNews(), name="blog_feed"),
-    url(r'^(?P<blog_slug>\w[\w/-]*)$', blog_views.blog_view, name="blog_article"),
-    
+    path('', blog_views.HomeView.as_view(), name="home"),
+    path('feed/', LatestNews(), name="feed"),
+    path('<blog_slug>', blog_views.BlogView.as_view(), name="article")
 ]

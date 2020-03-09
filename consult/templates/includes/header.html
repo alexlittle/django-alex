@@ -7,23 +7,23 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   
-  <a class="navbar-brand" href="{% url 'consult_home' %}">
+  <a class="navbar-brand" href="{% url 'consult:home' %}">
     <img src="{% static "consult/7hex.svg.png" %}" width="30" height="30" class="d-inline-block align-top" alt="">
     Alex Little
   </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item {% if home_active == True %}active{% endif %}">
-        <a href='{% url 'consult_home' %}' class="nav-link">{% trans 'Home' %}</a>
+        <a href='{% url 'consult:home' %}' class="nav-link">{% trans 'Home' %}</a>
       </li>
       <li class="nav-item {% if blog_active == True %}active{% endif %}">
-        <a href='{% url 'blog_home' %}' class="nav-link">{% trans 'News' %}</a>
+        <a href='{% url 'blog:home' %}' class="nav-link">{% trans 'News' %}</a>
       </li>
       <li class="nav-item {% if cv_active == True %}active{% endif %}">
-        <a href='{% url 'consult_cv' %}' class="nav-link">{% trans 'CV' %}</a>
+        <a href='{% url 'consult:cv' %}' class="nav-link">{% trans 'CV' %}</a>
       </li>
       <li class="nav-item {% if contact_active == True %}active{% endif %}">
-        <a href='{% url 'consult_contact' %}' class="nav-link">{% trans 'Contact' %}</a>
+        <a href='{% url 'consult:contact' %}' class="nav-link">{% trans 'Contact' %}</a>
       </li>
     </ul>
   </div>

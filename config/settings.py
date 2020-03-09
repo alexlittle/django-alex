@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 import sys
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__)) 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
@@ -27,7 +27,7 @@ SITE_ID = 1
 
 ROOT_URLCONF = 'config.urls'
 
-WSGI_APPLICATION = 'wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 INSTALLED_APPS = [
@@ -48,13 +48,13 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
-'django.middleware.security.SecurityMiddleware',
-'django.contrib.sessions.middleware.SessionMiddleware',
-'django.middleware.common.CommonMiddleware',
-'django.middleware.csrf.CsrfViewMiddleware',
-'django.contrib.auth.middleware.AuthenticationMiddleware',
-'django.contrib.messages.middleware.MessageMiddleware',
-'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 
@@ -81,7 +81,6 @@ TEMPLATES = [
 ]
 
 #####################################################################
-
 
 
 #####################################################################
@@ -114,11 +113,10 @@ EMAIL_FILE_PATH = '/tmp/'
 #####################################################################
 
 
-
 #####################################################################
 # Authentication
 LOGIN_URL = ('/admin/login/')
-AUTHENTICATION_BACKENDS =  [
+AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 #####################################################################
@@ -169,5 +167,5 @@ try:
     from config.local_settings import *  # noqa
 except ImportError:
     import warnings
-    warnings.warn("Using default settings. Add `config/local_settings.py` for custom settings.")
-
+    warnings.warn("Using default settings. Add `config/local_settings.py`"
+                  " for custom settings.")
