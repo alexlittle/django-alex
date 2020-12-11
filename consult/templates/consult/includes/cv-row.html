@@ -3,6 +3,8 @@
   <div class="col-sm-8">
   	{% if cv.title_url %}
   		<div class="cv-title"><a href="{{ cv.title_url }}">{{ cv.title }}</a></div>
+  	{% elif cv.file %}
+  		<div class="cv-title"><a href="{{ MEDIA_URL }}{{ cv.file }}">{{ cv.title }}</a></div>
   	{% else %}
   		<div class="cv-title">{{ cv.title }}</div>
   	{% endif %}

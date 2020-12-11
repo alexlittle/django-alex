@@ -37,6 +37,7 @@ class CV (models.Model):
     date = models.DateTimeField('date', default=timezone.now)
     date_display = models.CharField(max_length=300, blank=True, null=True)
     description = models.TextField(blank=True, null=True, default=None)
+    file = models.FileField(upload_to="files", blank=True, default=None)
 
     def __str__(self):
         return self.title
