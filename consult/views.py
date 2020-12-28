@@ -43,6 +43,7 @@ class CVView(TemplateView):
         return render(request,
                       'consult/cv.html',
                       {'cv_active': True,
+                       'page': get_page('cv'),
                        'experience': experience,
                        'publications': publications,
                        'conferences': conferences})

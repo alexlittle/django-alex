@@ -9,6 +9,8 @@
 {% block content %}
 <h1>{% trans 'Alex Little - CV/Resume' %}</h1>
 
+<div class="content-text">{{ page.content|safe }}</div>
+
 {% if experience %}
 	<h2>{% trans 'Experience' %}</h2>
 	{% for cv in experience %}
