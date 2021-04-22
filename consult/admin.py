@@ -9,7 +9,7 @@ class PageAdmin(admin.ModelAdmin):
 
 
 class CVAdmin(admin.ModelAdmin):
-    list_display = ('title', 'date_display', 'date', 'active')
+    list_display = ('title', 'date_display', 'type', 'date', 'active')
     search_fields = ['title', 'location', 'description']
 
 

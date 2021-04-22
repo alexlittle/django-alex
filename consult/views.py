@@ -40,13 +40,19 @@ class CVView(TemplateView):
             .filter(Q(type='workshop')
                     | Q(type='presentation')
                     | Q(type='conference')).order_by('-date')
+        education = CV.objects.filter(active=True,
+                                      type='education').order_by('-date')
+        courses = CV.objects.filter(active=True,
+                                      type='course').order_by('-date')
         return render(request,
                       'consult/cv.html',
                       {'cv_active': True,
                        'page': get_page('cv'),
                        'experience': experience,
                        'publications': publications,
-                       'conferences': conferences})
+                       'conferences': conferences,
+                       'education': education,
+                       'courses': courses})
 
 
 class ContactView(TemplateView):

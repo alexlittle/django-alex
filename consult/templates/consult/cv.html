@@ -18,9 +18,23 @@
 	{% endfor %}
 {% endif %}
 
+{% if education %}
+	<h2>{% trans 'Education' %}</h2>
+	{% for cv in education %}
+		{% include "consult/includes/cv-row.html" %}
+	{% endfor %}
+{% endif %}
+
 {% if publications %}
 	<h2>{% trans 'Publications' %}</h2>
 		{% for cv in publications %}
+		{% include "consult/includes/cv-row.html" %}
+	{% endfor %}
+{% endif %}
+
+{% if courses %}
+	<h2>{% trans 'Courses' %}</h2>
+	{% for cv in courses %}
 		{% include "consult/includes/cv-row.html" %}
 	{% endfor %}
 {% endif %}
