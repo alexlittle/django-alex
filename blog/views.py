@@ -24,7 +24,7 @@ class HomeView(TemplateView):
         return render(request,
                       'blog/home.html',
                       {'page': news,
-                       'blog_active': True})
+                       'news_active': True})
 
 
 class BlogView(TemplateView):
@@ -38,4 +38,4 @@ class BlogView(TemplateView):
         return render(request,
                       'blog/blog-full-post.html',
                       {'blog': blog,
-                       'blog_active': True})
+                       'news_active': True})

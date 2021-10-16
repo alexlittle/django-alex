@@ -2,13 +2,13 @@
 {% load i18n %} 
 
 <div class="row blog-row">
-<div class="col-sm-1">
+<div class="col-sm-2">
   	{{ post.display_date|date:"d M Y" }}
   </div>
   <div class="col-sm-8">
   	<h3 class="blog"><a href="{% url 'blog:article' post.slug %}">{{ post.title }}</a></h3>
-  	{{ post.body|safe|truncatechars_html:250 }}
-  	<p><a href="{% url 'blog:article' post.slug %}">{% trans 'more' %}</a></p>
+  	{{ post.body|safe|truncatewords_html:75 }}
+  	<a href="{% url 'blog:article' post.slug %}">{% trans 'read more' %}</a>
   	
   </div>
   {% if post.image %}
