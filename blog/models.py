@@ -3,6 +3,8 @@ from django.utils import timezone
 from ckeditor.fields import RichTextField
 from consult.fields import AutoSlugField
 
+from consult.models import Tracker
+
 
 class Blog(models.Model):
     display_date = models.DateTimeField(default=timezone.now)
@@ -17,3 +19,7 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_hits(self):
+        return Tracker.objects.filter(url__endswith=self.slug).count()
+        

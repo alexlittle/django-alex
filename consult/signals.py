@@ -15,7 +15,8 @@ def site_tracker_callback(sender, **kwargs):
     ip = request.META.get('REMOTE_ADDR', '0.0.0.0')
     agent = request.META.get('HTTP_USER_AGENT', 'unknown')
 
-    if search_crawler.is_search_crawler(agent):
+    if search_crawler.is_search_crawler(agent) or \
+            request.user.is_authenticated:
         return
 
     t = Tracker()
