@@ -9,3 +9,4 @@ pycodestyle
 pytest
 pytest-django
 flake8
+mysqlclient==2.1.0
