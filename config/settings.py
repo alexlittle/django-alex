@@ -162,6 +162,7 @@ LOGGING = {
 }
 #####################################################################
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 try:
     from config.local_settings import *  # noqa

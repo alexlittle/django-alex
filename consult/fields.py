@@ -1,4 +1,4 @@
-from autoslugged import AutoSlugField as BaseSlugField
+from autoslug import AutoSlugField as BaseSlugField
 
 
 class AutoSlugField(BaseSlugField):
