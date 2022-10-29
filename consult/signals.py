@@ -6,7 +6,7 @@ from consult.lib import search_crawler
 from consult.models import Tracker
 
 
-site_tracker = Signal(providing_args=["request", "data"])
+site_tracker = Signal()
 
 
 def site_tracker_callback(sender, **kwargs):
