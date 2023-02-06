@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 *.pyc
 *~
 .project
@@ -10,7 +10,7 @@
 /src
 /.idea
 /.eggs
-=======
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -99,5 +99,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
->>>>>>> 2452ef1572356a892d8c0e1591504f02137c0aab
+
 /uwsgi.sock
+
+
