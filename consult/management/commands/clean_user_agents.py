@@ -13,7 +13,7 @@ class Command(BaseCommand):
     help = "Removes bots/crawlers from trackers"
 
     def handle(self, *args, **options):
-        rts = Tracker.objects.all()
+        rts = Tracker.objects.all()[:1000]
         for rt in rts:
             if search_crawler.is_search_crawler(rt.agent):
                 print("found: " + rt.agent)
