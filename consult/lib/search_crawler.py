@@ -2,7 +2,6 @@
 
 def is_search_crawler(user_agent):
     spiders = ('bot',
-               'crawl',
                'slurp',
                'spider',
                'archiver',
@@ -30,7 +29,6 @@ def is_search_crawler(user_agent):
                'teoma',
                'alexa',
                'froogle',
-               'gigabot',
                'inktomi',
                'looksmart',
                'url_spider_sql',
@@ -39,12 +37,8 @@ def is_search_crawler(user_agent):
                'ask jeeves',
                'tecnoseek',
                'infoseek',
-               'webfindbot',
-               'girafabot',
                'crawler',
                'www.galaxy.com',
-               'googlebot',
-               'googlebot/2.1',
                'webmaster',
                'scooter',
                'james bond',
@@ -56,19 +50,32 @@ def is_search_crawler(user_agent):
                'spade',
                'zyborg',
                'rabaz',
-               'baiduspider',
                'feedfetcher-google',
                'technoratisnoop',
                'rankivabot',
                'mediapartners-google',
-               'sogou web spider',
-               'webalta crawler',
-               'mj12bot',
-               'yandex/',
-               'yadirectbot',
+               'yandex',
                'stackrambler',
                'dotbot',
-               'updown.io daemon 2.6')
-    if user_agent.lower() in spiders:
-        return True
+               'updown.io',
+               'go 1.1 package http',
+               'python-requests',
+               'libwww-perl',
+               'sogou',
+               'expanse',
+               'zoominfobot',
+               'go http package',
+               'apache-httpclient',
+               'netsystemsresearch',
+               'panscient.com',
+               'aiohttp',
+               'gdnplus',
+               'catexplorador',
+               'scrapy',
+               'masscan',
+               'wget',
+               'java/1')
+    for s in spiders:
+        if s in user_agent.lower():
+            return True
     return False
