@@ -1,4 +1,5 @@
 
+from django.conf import settings
 from django.db.models import Q
 from django.shortcuts import render
 
@@ -17,10 +18,14 @@ def get_page(slug):
 
 
 class HomeView(TemplateView):
+
     def get(self, request):
         site_tracker.send(sender=None, request=request)
         projects = Project.objects.filter(active=True).order_by('order_by')
-        news = Blog.objects.filter(active=True).order_by('-display_date')[:3]
+        if settings.BLOG_ENABLED:
+            news = Blog.objects.filter(active=True).order_by('-display_date')[:3]
+        else:
+            news = None
         return render(request,
                       'consult/home.html',
                       {'home_active': True,
@@ -30,6 +35,7 @@ class HomeView(TemplateView):
 
 
 class CVView(TemplateView):
+
     def get(self, request):
         site_tracker.send(sender=None, request=request)
         experience = CV.objects.filter(active=True,

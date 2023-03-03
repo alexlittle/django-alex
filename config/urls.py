@@ -3,9 +3,14 @@ from django.urls import include, path
 from django.contrib import admin
 from django.views import static
 
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('consult.urls')),
-    path('news/', include('blog.urls')),
-]
+if settings.BLOG_ENABLED:
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include('consult.urls')),
+        path('news/', include('blog.urls'))
+    ]
+else:
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include('consult.urls')),
+    ]

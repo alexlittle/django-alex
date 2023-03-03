@@ -36,10 +36,9 @@
 		<link rel="manifest" href="{% static "consult/favicons/manifest.json" %}">
 		<link rel="mask-icon" href="{% static "consult/favicons/safari-pinned-tab.svg" %}" color="#5bbad5">
 		<meta name="theme-color" content="#ffffff">
-		{% block extra_head_feed %}
-				<link rel="alternate" type="application/rss+xml" title="RSS"
-      				href="{% url 'blog:feed' %}">
-		{% endblock extra_head_feed %}
+		{% if BLOG_ENABLED %}
+				<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url 'blog:feed' %}">
+		{% endif %}
 
 	</head>
 	<body>

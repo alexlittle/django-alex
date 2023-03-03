@@ -74,6 +74,7 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.request',
                 'django.contrib.messages.context_processors.messages',
+                'consult.context_processors.get_settings',
             ],
             'debug': DEBUG,
         },
@@ -163,6 +164,7 @@ LOGGING = {
 #####################################################################
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+BLOG_ENABLED = True
 
 try:
     from config.local_settings import *  # noqa
