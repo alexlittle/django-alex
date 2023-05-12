@@ -14,11 +14,11 @@ from consult.lib import search_crawler
 class Command(BaseCommand):
     help = "Removes bots/crawlers from trackers"
     block_size = 5000
-    
+
     def handle(self, *args, **options):
         total_count = Tracker.objects.all().count()
         blocks = math.ceil(total_count/self.block_size)
-        
+
         for i in range(0, blocks+1):
             start = i*self.block_size
             end = start+self.block_size

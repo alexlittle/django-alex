@@ -38,18 +38,14 @@ class CVView(TemplateView):
 
     def get(self, request):
         site_tracker.send(sender=None, request=request)
-        experience = CV.objects.filter(active=True,
-                                       type='experience').order_by('-date')
-        publications = CV.objects.filter(active=True,
-                                         type='publication').order_by('-date')
+        experience = CV.objects.filter(active=True, type='experience').order_by('-date')
+        publications = CV.objects.filter(active=True, type='publication').order_by('-date')
         conferences = CV.objects.filter(active=True) \
             .filter(Q(type='workshop')
                     | Q(type='presentation')
                     | Q(type='conference')).order_by('-date')
-        education = CV.objects.filter(active=True,
-                                      type='education').order_by('-date')
-        courses = CV.objects.filter(active=True,
-                                      type='course').order_by('-date')
+        education = CV.objects.filter(active=True, type='education').order_by('-date')
+        courses = CV.objects.filter(active=True, type='course').order_by('-date')
         return render(request,
                       'consult/cv.html',
                       {'cv_active': True,

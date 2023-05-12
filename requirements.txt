@@ -4,7 +4,6 @@ Pillow==9.5.0
 sorl-thumbnail>=12.4,<13.0
 django-autoslug==1.9.9
 django-ckeditor==6.5.1
-pycodestyle
 pytest
 pytest-django
 flake8
