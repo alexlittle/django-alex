@@ -18,7 +18,7 @@
   	{% else %}
   		<h2>{{ project.title }}</h2>
   	{% endif %}
-  	<p>{{ project.description }}</p>
+  	<p>{{ project.description|safe }}</p>
   	{% if project.title_url %}
   		<p><a href="{{ project.title_url }}">Find out more...</a></p>
   	{% endif %}
