@@ -165,6 +165,8 @@ LOGGING = {
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 BLOG_ENABLED = True
 
+SESSION_COOKIE_NAME = "consult"
+
 try:
     from config.local_settings import *  # noqa
 except ImportError:
