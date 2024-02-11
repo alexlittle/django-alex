@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from ckeditor.fields import RichTextField
+from tinymce.models import HTMLField
 from consult.fields import AutoSlugField
 
 from consult.models import Tracker
@@ -13,7 +13,7 @@ class Blog(models.Model):
                          max_length=100,
                          blank=True,
                          null=True)
-    body = RichTextField()
+    body = HTMLField()
     image = models.FileField(upload_to="images", blank=True, default=None)
     active = models.BooleanField(default=False)
 

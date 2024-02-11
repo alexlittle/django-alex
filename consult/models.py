@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from ckeditor.fields import RichTextField
+from tinymce.models import HTMLField
 
 
 class Page (models.Model):
@@ -12,7 +12,7 @@ class Page (models.Model):
                                 blank=True,
                                 null=False,
                                 default=None)
-    content = RichTextField(null=True, blank=True, default=None)
+    content = HTMLField(null=True, blank=True, default=None)
 
     def __str__(self):
         return self.title
@@ -39,7 +39,7 @@ class CV (models.Model):
     location_url = models.CharField(max_length=300, blank=True, null=True)
     date = models.DateTimeField('date', default=timezone.now)
     date_display = models.CharField(max_length=300, blank=True, null=True)
-    description = RichTextField(blank=True, null=True, default=None)
+    description = HTMLField(blank=True, null=True, default=None)
     file = models.FileField(upload_to="files", blank=True, default=None)
 
     def __str__(self):
@@ -50,7 +50,7 @@ class CVDetail (models.Model):
     cv = models.ForeignKey(CV,
                            related_name='details',
                            on_delete=models.CASCADE)
-    description = RichTextField(blank=True, null=True, default=None)
+    description = HTMLField(blank=True, null=True, default=None)
     order_by = models.IntegerField(default=0)
 
     def __str__(self):
@@ -65,7 +65,7 @@ class Project (models.Model):
     location_url = models.CharField(max_length=300, blank=True, null=True)
     date = models.DateTimeField('date', default=timezone.now)
     date_display = models.CharField(max_length=300, blank=True, null=True)
-    description = RichTextField(blank=True, null=True, default=None)
+    description = HTMLField(blank=True, null=True, default=None)
     order_by = models.IntegerField(default=0)
     image = models.FileField(upload_to="projects", blank=True, default=None)
 
