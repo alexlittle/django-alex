@@ -5,7 +5,6 @@ from django.shortcuts import render
 
 from consult.models import CV, Project, Page
 from blog.models import Blog
-from consult.signals import site_tracker
 from django.views.generic import TemplateView
 
 
@@ -19,47 +18,38 @@ def get_page(slug):
 
 class HomeView(TemplateView):
 
-    def get(self, request):
-        site_tracker.send(sender=None, request=request)
-        projects = Project.objects.filter(active=True).order_by('order_by')
+    template_name = 'consult/home.html'
+
+    def get_context_data(self, **kwargs):
+        data = super().get_context_data(**kwargs)
+        if settings.PROJECTS_ENABLED:
+            data['projects'] = Project.objects.filter(active=True).order_by('order_by')
         if settings.BLOG_ENABLED:
-            news = Blog.objects.filter(active=True).order_by('-display_date')[:3]
-        else:
-            news = None
-        return render(request,
-                      'consult/home.html',
-                      {'home_active': True,
-                       'projects': projects,
-                       'page': get_page('home'),
-                       'news': news})
+            data['news'] = Blog.objects.filter(active=True).order_by('-display_date')[:3]
+        data['page'] = get_page('home')
+        return data
 
 
 class CVView(TemplateView):
 
-    def get(self, request):
-        site_tracker.send(sender=None, request=request)
-        experience = CV.objects.filter(active=True, type='experience').order_by('-date')
-        publications = CV.objects.filter(active=True, type='publication').order_by('-date')
-        conferences = CV.objects.filter(active=True) \
+    template_name = 'consult/cv.html'
+
+    def get_context_data(self, **kwargs):
+        data = super().get_context_data(**kwargs)
+        data['experience'] = CV.objects.filter(active=True, type='experience').order_by('-date')
+        data['publications'] = CV.objects.filter(active=True, type='publication').order_by('-date')
+        data['conferences'] = CV.objects.filter(active=True) \
             .filter(Q(type='workshop')
                     | Q(type='presentation')
                     | Q(type='conference')).order_by('-date')
-        education = CV.objects.filter(active=True, type='education').order_by('-date')
-        courses = CV.objects.filter(active=True, type='course').order_by('-date')
-        return render(request,
-                      'consult/cv.html',
-                      {'cv_active': True,
-                       'page': get_page('cv'),
-                       'experience': experience,
-                       'publications': publications,
-                       'conferences': conferences,
-                       'education': education,
-                       'courses': courses})
+        data['education'] = CV.objects.filter(active=True, type='education').order_by('-date')
+        data['courses'] = CV.objects.filter(active=True, type='course').order_by('-date')
+        data['page'] = get_page('cv')
+        return data
 
 
 class ContactView(TemplateView):
-    def get(self, request):
-        site_tracker.send(sender=None, request=request)
-        return render(request,
-                      'consult/contact.html',
-                      {'contact_active': True})
+
+    template_name = 'consult/contact.html'
+
+

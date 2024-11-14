@@ -11,37 +11,54 @@
 
 <div class="content-text">{{ page.content|safe }}</div>
 
+{% trans 'Jump to:' %}
 {% if experience %}
-	<h2>{% trans 'Experience' %}</h2>
+	<a href="#exp">{% trans 'Experience' %}</a>
+{% endif %}
+{% if education %}
+	| <a href="#ed">{% trans 'Education' %}</a>
+{% endif %}
+{% if courses %}
+	| <a href="#courses">{% trans 'Courses' %}</a>
+{% endif %}
+{% if publications %}
+	| <a href="#pub">{% trans 'Publications' %}</a>
+{% endif %}
+{% if conferences %}
+	| <a href="#conf">{% trans 'Conferences and Workshops' %}</a>
+{% endif %}
+
+{% if experience %}
+	<h2 id="exp">{% trans 'Experience' %}</h2>
 	{% for cv in experience %}
 		{% include "consult/includes/cv-row.html" %}
 	{% endfor %}
 {% endif %}
 
 {% if education %}
-	<h2>{% trans 'Education' %}</h2>
+	<h2 id="ed">{% trans 'Education' %}</h2>
 	{% for cv in education %}
 		{% include "consult/includes/cv-row.html" %}
 	{% endfor %}
 {% endif %}
 
-{% if publications %}
-	<h2>{% trans 'Publications' %}</h2>
-		{% for cv in publications %}
-		{% include "consult/includes/cv-row.html" %}
-	{% endfor %}
-{% endif %}
-
 {% if courses %}
-	<h2>{% trans 'Courses' %}</h2>
+	<h2 id="courses">{% trans 'Courses' %}</h2>
 	{% for cv in courses %}
 		{% include "consult/includes/cv-row.html" %}
 	{% endfor %}
 {% endif %}
 
+{% if publications %}
+	<h2 id="pub">{% trans 'Publications' %}</h2>
+		{% for cv in publications %}
+		{% include "consult/includes/cv-row.html" %}
+	{% endfor %}
+{% endif %}
+
 {% if conferences %}
-	<h2>{% trans 'Conferences and Workshops' %}</h2>
-		{% for cv in conferences %}
+	<h2 id="conf">{% trans 'Conferences and Workshops' %}</h2>
+    {% for cv in conferences %}
 		{% include "consult/includes/cv-row.html" %}
 	{% endfor %}
 {% endif %}
