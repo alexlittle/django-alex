@@ -56,6 +56,13 @@ class CVDetail (models.Model):
     def __str__(self):
         return self.description
 
+class CVSkill(models.Model):
+    description = models.TextField(blank=True, null=True, default=None)
+    order_by = models.IntegerField(default=0)
+    active = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.description
 
 class Project (models.Model):
     active = models.BooleanField(default=False)

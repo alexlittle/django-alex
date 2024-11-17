@@ -3,7 +3,7 @@ from django.conf import settings
 from django.db.models import Q
 from django.shortcuts import render
 
-from consult.models import CV, Project, Page
+from consult.models import CV, Project, Page, CVSkill
 from blog.models import Blog
 from django.views.generic import TemplateView
 
@@ -36,12 +36,15 @@ class CVView(TemplateView):
 
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
+        data['skills'] = CVSkill.objects.filter(active=True).order_by('order_by')
         data['experience'] = CV.objects.filter(active=True, type='experience').order_by('-date')
         data['publications'] = CV.objects.filter(active=True, type='publication').order_by('-date')
+        '''
         data['conferences'] = CV.objects.filter(active=True) \
             .filter(Q(type='workshop')
                     | Q(type='presentation')
                     | Q(type='conference')).order_by('-date')
+        '''
         data['education'] = CV.objects.filter(active=True, type='education').order_by('-date')
         data['courses'] = CV.objects.filter(active=True, type='course').order_by('-date')
         data['page'] = get_page('cv')
