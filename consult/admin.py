@@ -10,7 +10,7 @@ class PageAdmin(admin.ModelAdmin):
 
 @admin.register(CV)
 class CVAdmin(admin.ModelAdmin):
-    list_display = ('title', 'date_display', 'type', 'date', 'active')
+    list_display = ('title', 'date_display', 'type', 'date', 'active', 'current')
     search_fields = ['title', 'location', 'description']
 
 @admin.register(CVDetail)

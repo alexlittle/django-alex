@@ -41,6 +41,8 @@
 				<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url 'blog:feed' %}">
 		{% endif %}
 
+        {% block extra_scripts %}
+	    {% endblock extra_scripts %}
 	</head>
 	<body>
 	

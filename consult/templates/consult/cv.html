@@ -6,6 +6,7 @@
 	{% trans 'Alex Little - CV' %}
 {% endblock extra_head_title %}
 
+
 {% block content %}
 <h1>{% trans 'Alex Little - CV' %}</h1>
 
@@ -22,55 +23,147 @@
 </div>
 
 {% trans 'Jump to:' %}
-{% if experience %}
+{% if experience_current %}
 	<a href="#exp">{% trans 'Experience' %}</a>
 {% endif %}
-{% if education %}
+{% if education_current %}
 	| <a href="#ed">{% trans 'Education' %}</a>
 {% endif %}
-{% if courses %}
+{% if courses_current %}
 	| <a href="#courses">{% trans 'Courses' %}</a>
 {% endif %}
-{% if publications %}
+{% if publications_current %}
 	| <a href="#pub">{% trans 'Publications' %}</a>
 {% endif %}
-{% if conferences %}
+{% if conferences_current %}
 	| <a href="#conf">{% trans 'Conferences and Workshops' %}</a>
 {% endif %}
 
-{% if experience %}
+{% if experience_current %}
 	<h2 id="exp">{% trans 'Experience' %}</h2>
-	{% for cv in experience %}
+	{% for cv in experience_current %}
 		{% include "consult/includes/cv-row.html" %}
 	{% endfor %}
+
+    {% if experience_older %}
+        <button class="btn toggle-btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#experience_older"
+                aria-expanded="false"
+                aria-controls="experience_older"
+                data-show-text="&#x25B7;&nbsp;&nbsp; Show Older "
+                data-hide-text="&#x25B3;&nbsp;&nbsp; Hide Older">
+            &#x25B7;&nbsp;&nbsp; Show Older
+        </button>
+        <div class="collapse mt-3" id="experience_older">
+            {% for cv in experience_older %}
+                {% include "consult/includes/cv-row.html" %}
+            {% endfor %}
+        </div>
+    {% endif %}
 {% endif %}
 
-{% if education %}
+{% if education_current %}
 	<h2 id="ed">{% trans 'Education' %}</h2>
-	{% for cv in education %}
+	{% for cv in education_current %}
 		{% include "consult/includes/cv-row.html" %}
 	{% endfor %}
+
+    {% if education_older %}
+        <button class="btn toggle-btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#education_older"
+                aria-expanded="false"
+                aria-controls="education_older"
+                data-show-text="&#x25B7;&nbsp;&nbsp; Show Older "
+                data-hide-text="&#x25B3;&nbsp;&nbsp; Hide Older">
+            &#x25B7;&nbsp;&nbsp; Show Older
+        </button>
+        <div class="collapse mt-3" id="education_older">
+            {% for cv in education_older %}
+                {% include "consult/includes/cv-row.html" %}
+            {% endfor %}
+        </div>
+    {% endif %}
 {% endif %}
 
-{% if courses %}
+{% if courses_current %}
 	<h2 id="courses">{% trans 'Courses' %}</h2>
-	{% for cv in courses %}
+	{% for cv in courses_current %}
 		{% include "consult/includes/cv-row.html" %}
 	{% endfor %}
+
+    {% if courses_older %}
+        <button class="btn toggle-btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#courses_older"
+                aria-expanded="false"
+                aria-controls="courses_older"
+                data-show-text="&#x25B7;&nbsp;&nbsp; Show Older "
+                data-hide-text="&#x25B3;&nbsp;&nbsp; Hide Older">
+            &#x25B7;&nbsp;&nbsp; Show Older
+        </button>
+        <div class="collapse mt-3" id="courses_older">
+            {% for cv in courses_older %}
+                {% include "consult/includes/cv-row.html" %}
+            {% endfor %}
+        </div>
+    {% endif %}
 {% endif %}
 
-{% if publications %}
+{% if publications_current %}
 	<h2 id="pub">{% trans 'Publications' %}</h2>
-		{% for cv in publications %}
+    {% for cv in publications_current %}
+        {% include "consult/includes/cv-row.html" %}
+    {% endfor %}
+
+    {% if publications_older %}
+        <button class="btn toggle-btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#publications_older"
+                aria-expanded="false"
+                aria-controls="publications_older"
+                data-show-text="&#x25B7;&nbsp;&nbsp; Show Older "
+                data-hide-text="&#x25B3;&nbsp;&nbsp; Hide Older">
+            &#x25B7;&nbsp;&nbsp; Show Older
+        </button>
+        <div class="collapse mt-3" id="publications_older">
+            {% for cv in publications_older %}
+                {% include "consult/includes/cv-row.html" %}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endif %}
+
+{% if conferences_current %}
+	<h2 id="conf">{% trans 'Conferences and Workshops' %}</h2>
+    {% for cv in conferences_current %}
 		{% include "consult/includes/cv-row.html" %}
 	{% endfor %}
 {% endif %}
 
-{% if conferences %}
-	<h2 id="conf">{% trans 'Conferences and Workshops' %}</h2>
-    {% for cv in conferences %}
-		{% include "consult/includes/cv-row.html" %}
-	{% endfor %}
-{% endif %}
+<script>
+    // Select all buttons with toggle functionality
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+
+    toggleButtons.forEach(button => {
+          const targetId = button.getAttribute('data-bs-target');
+          const collapseEl = document.querySelector(targetId);
+
+          // Change button text when section is shown
+          collapseEl.addEventListener('show.bs.collapse', function () {
+            button.textContent = button.dataset.hideText;
+        });
+
+          // Change button text when section is hidden
+          collapseEl.addEventListener('hide.bs.collapse', function () {
+            button.textContent = button.dataset.showText;
+        });
+    });
+</script>
 
 {% endblock %}

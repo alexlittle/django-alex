@@ -37,16 +37,19 @@ class CVView(TemplateView):
     def get_context_data(self, **kwargs):
         data = super().get_context_data(**kwargs)
         data['skills'] = CVSkill.objects.filter(active=True).order_by('order_by')
-        data['experience'] = CV.objects.filter(active=True, type='experience').order_by('-date')
-        data['publications'] = CV.objects.filter(active=True, type='publication').order_by('-date')
-        '''
-        data['conferences'] = CV.objects.filter(active=True) \
-            .filter(Q(type='workshop')
-                    | Q(type='presentation')
-                    | Q(type='conference')).order_by('-date')
-        '''
-        data['education'] = CV.objects.filter(active=True, type='education').order_by('-date')
-        data['courses'] = CV.objects.filter(active=True, type='course').order_by('-date')
+
+        cvs_current = CV.objects.filter(active=True, current=True)
+        data['experience_current'] = cvs_current.filter(type='experience')
+        data['publications_current'] = cvs_current.filter(type='publication')
+        data['education_current'] = cvs_current.filter(type='education')
+        data['courses_current'] = cvs_current.filter(type='course')
+
+        cvs_older = CV.objects.filter(active=True, current=False)
+        data['experience_older'] = cvs_older.filter(type='experience')
+        data['publications_older'] = cvs_older.filter(type='publication')
+        data['education_older'] = cvs_older.filter(type='education')
+        data['courses_older'] = cvs_older.filter(type='course')
+
         data['page'] = get_page('cv')
         return data
 
