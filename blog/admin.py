@@ -15,12 +15,8 @@ class BlogAdmin(admin.ModelAdmin):
         return qs
 
     def show_preview_url(self, obj):
-        return format_html("<a href="
-                           + reverse('blog:article',
-                                     args={obj.slug})
-                           + "?preview=1>"
-                           + obj.title
-                           + " - preview</a>")
+        return format_html("<a href='{}?preview=1'>Preview</a>", reverse('blog:article',args={obj.slug}))
+
 
     def hit_count(self, obj):
         return obj.get_hits()
